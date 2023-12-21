@@ -1,4 +1,5 @@
 # Ecommerce-website-with-Django
+[![Image of my-views-counter](https://github.com/Faishal003/my-views-counter/blob/master/svg/734469248/badge.svg)](https://github.com/Faishal003/my-views-counter/blob/master/readme/734469248/week.md)
 Django-ecommerce is an open-source ecommerce platform built on the Django Web Framework.
 # 💥Features Included💥
 * SignUp & Login functionality.
