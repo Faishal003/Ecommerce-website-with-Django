@@ -1,0 +1,47 @@
+{% extends 'base.html'%}
+{% block body_block%}
+<div class="container my-5">
+    <div class="my-5">
+        <h2>Your Cart</h2>
+    </div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col" width="15%">#</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Quantity</th>
+                <th scope="col" align="right">Price</th>
+                <th scope="col">Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for cart in carts %}
+            <tr>
+                <th scope="row">{{forloop.counter}}</th>
+                <td>{{cart.item.name}}</td>
+                <td>
+                    <a href="{% url 'App_Order:decrease' pk=cart.item.pk %}" class="mr-2"><span class="badge badge-light"><i class="fas fa-minus"></i></span></a>
+                    {{cart.quantity}}
+                    <a href="{% url 'App_Order:increase' pk=cart.item.pk %}" class="mr-2"><span class="badge badge-light"><i class="fas fa-plus"></i></span></a>
+                </td>
+                <td align="right">&#2547; {{cart.get_total}}</td>
+                <td><a href="{% url 'App_Order:remove' pk=cart.item.pk %}"><i class="fas fa-trash-alt"></i></a></td>
+            </tr>
+            {% endfor %}
+            <tr>
+                <th scope="row"></th>
+                <td colspan="2">Total</td>
+                <td align="right">&#2547; {{order.get_totals | floatformat:2}}</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row"></th>
+                <td colspan="4" class="text-right">
+                    <a href="{% url 'App_Shop:home' %}" class="btn btn-warning mr-4">Continue Shopping</a>
+                    <a href="{% url 'App_Payment:checkout' %}" class="btn btn-success mr-4">Checkout</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}

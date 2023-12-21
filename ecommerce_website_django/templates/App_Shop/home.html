@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block body_block %}
+<div class="container my-5">
+    <h2 class="my-5">Featured Products</h2>
+    <div class="row">
+        {% for product in object_list %}
+        <div class="col-md-6 col-sm-12 col-lg-3">
+            <figure class="card card-product">
+                <div class="img-wrap">
+                    <img src="/media/{{product.mainimage}}" style="width: 100%; height:300px;">
+                </div>
+                <figcaption class="info-wrap">
+                    <h6 class="title"><a href="{% url 'App_Shop:product_detail' pk=product.pk %}" style="color:black">{{product.name}}</a></h6>
+                    <div class="action-wrap">
+                        <div class="price-wrap h5">
+                            <span class="price-new">&#2547; {{product.price}}</span>
+                            <span class="price-old">&#2547; {{product.old_price}}</span>
+                        </div>
+                    </div>
+                </figcaption>
+
+            </figure>
+        </div>     
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
