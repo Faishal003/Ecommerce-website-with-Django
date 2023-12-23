@@ -1,13 +1,13 @@
 # Ecommerce-website-with-Django
 [![Image of my-views-counter](https://github.com/Faishal003/my-views-counter/blob/master/svg/734469248/badge.svg)](https://github.com/Faishal003/my-views-counter/blob/master/readme/734469248/week.md) ![Static Badge](https://img.shields.io/badge/python-3.8-blue) ![Static Badge](https://img.shields.io/badge/Django-4.2-blue)
 <br>
-Django-ecommerce is an open-source ecommerce platform built on the Django Web Framework.
+Django-eCommerce is an open-source e-commerce platform built on the Django Web Framework.
 # 💥Features Included💥
 * SignUp & Login functionality.
 * Edit profile functionality.
 * Shopping Cart.
 * Order Management.
-* Increase & decrease cart item.
+* Increase & decrease cart items.
 * Checkout functionality.
 * Payments Using sslcommerz.
 * Logout functionality.
@@ -15,7 +15,7 @@ Django-ecommerce is an open-source ecommerce platform built on the Django Web Fr
 **Note :** Make sure you have Python version 3.8.x 👈<br>
 Install a few prerequisite files before running the project 👀<br>
 ```
-pip install django
+pip install Django
 pip install pillow
 pip install Django-crispy-forms
 pip install crispy-bootstrap4  
@@ -47,4 +47,4 @@ All Set! 🤩🔥
 # Demo
 <span style="color: blue;">https://ecommerce003.pythonanywhere.com/</span>
 # Note
-This project is just a basic foundation of ecommerce django website. Many features should be added in future and more responsive ui also.🤞
+This project is just a basic foundation of the e-commerce Django website. Many features should be added in the future and more responsive ui also.🤞
